@@ -1,0 +1,30 @@
+body{
+    font-family: sans-serif;
+}
+
+
+.topLink{
+    color:gray;
+    padding-left: 10px;
+}
+.topLink:hover{
+    color:white;
+    cursor: pointer;
+}
+button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+button:hover{
+    overflow-z:4px;
+}
+input{
+    border-width: 0px;
+}
+input:hover{
+    border: 1px solid #0078d4;
+}
