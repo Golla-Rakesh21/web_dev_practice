@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Todo List</h1>
+    <div id="todo">
+    <div id="todo-1">
+    <h4>1. Take bath</h4>
+    <button onclick="deleteTodo(1)">Delete</button>
+    </div>
+    <div id="todo-2">
+    <h4>2. go out of room</h4>
+    <button onclick="deleteTodo(2)">Delete</button>
+    </div>
+    </div>
+    <div>
+        <input type="text"/>
+        <button onclick="addTodo()" placeholder="add ur todo">Add todo</button>
+        
+    </div>
+            <script>
+                    var index=2;
+                    function addTodo(){
+                        index++;
+                    const inputel=document.querySelector("input");
+                    const val=inputel.value; //for input u can use .value
+                   // const h1_val=document.querySelector("h1");
+                    //const h1_val=document.querySelector("h1").innerHTML;//either upper way works or down way works innerHTML 
+                    //console.log(h1_val.innerHTML);//for the other elements use the .innerHTML
+
+                    //if u have multiple tags of same type,then u can use queryselectorAll which returns a bunch of same types as array u can asscess it similar to arrays.
+                        const x=document.createElement("div");
+                        x.setAttribute("id","todo-"+index);
+                        x.innerHTML="<h4>"+index+"."+val+'</h4><button onclick="deleteTodo('+index+')">Delete</button>';
+                        const parent=document.getElementById("todo");
+                        parent.appendChild(x);
+                        }
+                function deleteTodo(index){
+                    element=document.getElementById("todo-"+index);
+                    index--;
+                    element.parentNode.removeChild(element);
+                }
+            </script>
+
+</body>
+</html>
